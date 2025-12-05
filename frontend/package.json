@@ -14,6 +14,7 @@
     "dotenv": "^16.3.1",
     "llamaindex": "0.1.10",
     "next": "^14.0.3",
+    "next-auth": "^4.24.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "supports-color": "^9.4.0"

@@ -1,41 +1,40 @@
-/* eslint-disable turbo/no-undeclared-env-vars */
-import cors from "cors";
 import "dotenv/config";
-import express, { Express, Request, Response } from "express";
-import chatRouter from "./src/routes/chat.route";
+import express from "express";
+import cors from "cors";
 
-const app: Express = express();
-const port = parseInt(process.env.PORT2 || "8000");
+import { chat } from "./src/controllers/chat.controller";
+import { getLatestHistory } from "./src/controllers/historyStore";
 
-const env = process.env["NODE_ENV"];
-const isDevelopment = !env || env === "development";
-const prodCorsOrigin = process.env["PROD_CORS_ORIGIN"];
+const app = express();
 
+app.use(cors());
 app.use(express.json());
 
-if (isDevelopment) {
-  console.warn("Running in development mode - allowing CORS for all origins");
-  app.use(cors());
-} else if (prodCorsOrigin) {
-  console.log(
-    `Running in production mode - allowing CORS for domain: ${prodCorsOrigin}`,
-  );
-  const corsOptions = {
-    origin: prodCorsOrigin, // Restrict to production domain
-  };
-  app.use(cors(corsOptions));
-} else {
-  console.warn("Production CORS origin not set, defaulting to no CORS.");
-}
+app.post("/api/chat", chat);
 
-app.use(express.text());
-
-app.get("/", (req: Request, res: Response) => {
-  res.send("LlamaIndex Express Server");
+app.get("/api/history", async (req, res) => {
+  const userId = req.query.userId as string | undefined;
+  if (!userId) {
+    return res.status(400).json({ error: "Missing userId" });
+  }
+  try {
+    const history = await getLatestHistory(userId);
+    const withIds =
+      history?.map((m, idx) => ({
+        id: `${m.timestamp || idx}-${idx}`,
+        role: m.role,
+        content: m.content,
+        timestamp: m.timestamp,
+      })) || [];
+    return res.json({ history: withIds });
+  } catch (err) {
+    console.error("[History] Failed to read history", err);
+    return res.status(500).json({ error: "Failed to read history" });
+  }
 });
 
-app.use("/api/chat", chatRouter);
+const PORT = process.env.PORT || 8000;
 
-app.listen(port, () => {
-  console.log(`⚡️[server]: Server is running at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Backend server running on http://localhost:${PORT}`);
 });
