@@ -20,165 +20,257 @@ var __async = (__this, __arguments, generator) => {
 };
 
 // index.ts
-import cors from "cors";
 import "dotenv/config";
-import express2 from "express";
-
-// src/routes/chat.route.ts
 import express from "express";
+import cors from "cors";
 
 // src/controllers/chat.controller.ts
-import { streamToResponse } from "ai";
-import { OpenAI } from "llamaindex";
+import { OpenAIStream, streamToResponse } from "ai";
+import OpenAI from "openai";
 
 // src/controllers/engine/index.ts
-import {
-  ContextChatEngine,
-  serviceContextFromDefaults,
-  storageContextFromDefaults,
-  VectorStoreIndex
-} from "llamaindex";
+import fs from "fs/promises";
+import path from "path";
+import { pipeline } from "@xenova/transformers";
 
 // src/controllers/engine/constants.mjs
 var STORAGE_CACHE_DIR = "./cache";
-var CHUNK_SIZE = 512;
-var CHUNK_OVERLAP = 20;
 
 // src/controllers/engine/index.ts
-function getDataSource(llm) {
+var chunksPromise = null;
+var extractorPromise = null;
+function loadChunks() {
   return __async(this, null, function* () {
-    const serviceContext = serviceContextFromDefaults({
-      llm,
-      chunkSize: CHUNK_SIZE,
-      chunkOverlap: CHUNK_OVERLAP
-    });
-    let storageContext = yield storageContextFromDefaults({
-      persistDir: `${STORAGE_CACHE_DIR}`
-    });
-    const numberOfDocs = Object.keys(
-      storageContext.docStore.toDict()
-    ).length;
-    if (numberOfDocs === 0) {
-      throw new Error(
-        `StorageContext is empty - call 'npm run generate' to generate the storage first`
-      );
+    if (!chunksPromise) {
+      chunksPromise = (() => __async(this, null, function* () {
+        try {
+          const filePath = path.join(
+            process.cwd(),
+            STORAGE_CACHE_DIR,
+            "embeddings.json"
+          );
+          const raw = yield fs.readFile(filePath, "utf-8");
+          const data = JSON.parse(raw);
+          console.log(
+            `[RAG] Loaded ${data.length} embedded chunks from ${filePath}`
+          );
+          return data;
+        } catch (err) {
+          console.error(
+            "[RAG] Failed to load embeddings.json. Did you run `npm run generate`?",
+            err
+          );
+          return [];
+        }
+      }))();
     }
-    return yield VectorStoreIndex.init({
-      storageContext,
-      serviceContext
-    });
+    return chunksPromise;
   });
 }
-function createChatEngine(llm) {
+function getExtractor() {
   return __async(this, null, function* () {
-    const index = yield getDataSource(llm);
-    const retriever = index.asRetriever();
-    retriever.similarityTopK = 3;
-    return new ContextChatEngine({
-      chatModel: llm,
-      retriever,
-      chatHistory: "Start the conversation with a nice greeting to Horia Modran!"
+    if (!extractorPromise) {
+      const embeddingModel = process.env.HF_EMBEDDING_MODEL || "Xenova/all-MiniLM-L6-v2";
+      extractorPromise = pipeline("feature-extraction", embeddingModel);
+    }
+    return extractorPromise;
+  });
+}
+function cosineSim(a, b) {
+  let dot = 0;
+  let na = 0;
+  let nb = 0;
+  const len = Math.min(a.length, b.length);
+  for (let i = 0; i < len; i++) {
+    dot += a[i] * b[i];
+    na += a[i] * a[i];
+    nb += b[i] * b[i];
+  }
+  if (na === 0 || nb === 0)
+    return 0;
+  return dot / (Math.sqrt(na) * Math.sqrt(nb));
+}
+function embedQuestion(question) {
+  return __async(this, null, function* () {
+    const extractor = yield getExtractor();
+    const normalizedQuestion = question.normalize("NFKC").toLowerCase();
+    const output = yield extractor(normalizedQuestion, {
+      pooling: "mean",
+      normalize: true
     });
+    const vec = Array.from(output.data);
+    return vec;
+  });
+}
+function getRagContext(question) {
+  return __async(this, null, function* () {
+    var _a, _b;
+    const chunks = yield loadChunks();
+    if (!chunks.length) {
+      console.warn("[RAG] No chunks loaded; returning empty context.");
+      return { context: "", images: [] };
+    }
+    const qEmb = yield embedQuestion(question);
+    if (!qEmb)
+      return { context: "", images: [] };
+    const questionTokens = new Set(
+      question.toLowerCase().normalize("NFKC").split(/\W+/).filter((t) => t.length >= 3)
+    );
+    const scored = chunks.map((chunk) => {
+      const sim = cosineSim(qEmb, chunk.embedding);
+      const chunkTokens = new Set(
+        chunk.text.toLowerCase().normalize("NFKC").split(/\W+/).filter((t) => t.length >= 3)
+      );
+      let overlap = 0;
+      questionTokens.forEach((t) => {
+        if (chunkTokens.has(t))
+          overlap += 1;
+      });
+      const keywordScore = questionTokens.size > 0 ? overlap / questionTokens.size : 0;
+      const blended = sim * 0.7 + keywordScore * 0.3;
+      return {
+        chunk,
+        score: blended,
+        sim,
+        keywordScore
+      };
+    });
+    scored.sort((a, b) => b.score - a.score);
+    const topK = 6;
+    const best = scored.slice(0, topK);
+    const bestScore = (_b = (_a = best[0]) == null ? void 0 : _a.score) != null ? _b : 0;
+    const minScore = Math.max(0.1, bestScore * 0.45);
+    const filtered = best.filter((b) => b.score >= minScore);
+    console.log(
+      `[RAG] Top ${best.length} chunks scores:`,
+      best.map((b) => `${b.score.toFixed(3)} (sim:${b.sim.toFixed(3)}, kw:${b.keywordScore.toFixed(3)})`)
+    );
+    console.log(
+      `[RAG] Using ${filtered.length} chunks with minScore ${minScore.toFixed(3)}`
+    );
+    const selected = filtered.length ? filtered : best.slice(0, 1);
+    const maxContextChars = 4e3;
+    const context = selected.map((b) => b.chunk.text).join("\n\n").slice(0, maxContextChars);
+    return { context, images: [] };
   });
 }
 
-// src/controllers/llamaindex-stream.ts
-import {
-  createCallbacksTransformer,
-  createStreamDataTransformer,
-  experimental_StreamData,
-  trimStartOfStreamHelper
-} from "ai";
-function createParser(res, data, opts) {
-  const it = res[Symbol.asyncIterator]();
-  const trimStartOfStream = trimStartOfStreamHelper();
-  return new ReadableStream({
-    start() {
-      if (opts == null ? void 0 : opts.image_url) {
-        const message = {
-          type: "image_url",
-          image_url: {
-            url: opts.image_url
-          }
-        };
-        data.append(message);
-      } else {
-        data.append({});
-      }
-    },
-    pull(controller) {
-      return __async(this, null, function* () {
-        var _a2;
-        const { value, done } = yield it.next();
-        if (done) {
-          controller.close();
-          data.append({});
-          data.close();
-          return;
-        }
-        const text = trimStartOfStream((_a2 = value.response) != null ? _a2 : "");
-        if (text) {
-          controller.enqueue(text);
-        }
-      });
+// src/controllers/historyStore.ts
+import fs2 from "fs/promises";
+import path2 from "path";
+var HISTORY_DIR = path2.join(process.cwd(), "history");
+function appendHistory(userId, messages) {
+  return __async(this, null, function* () {
+    yield fs2.mkdir(HISTORY_DIR, { recursive: true });
+    const filename = path2.join(
+      HISTORY_DIR,
+      sanitize(userId) + ".json"
+    );
+    let existing = [];
+    try {
+      const raw = yield fs2.readFile(filename, "utf-8");
+      existing = JSON.parse(raw);
+    } catch (e) {
+      existing = [];
+    }
+    existing.push(messages);
+    yield fs2.writeFile(filename, JSON.stringify(existing, null, 2));
+  });
+}
+function getLatestHistory(userId) {
+  return __async(this, null, function* () {
+    const filename = path2.join(HISTORY_DIR, sanitize(userId) + ".json");
+    try {
+      const raw = yield fs2.readFile(filename, "utf-8");
+      const existing = JSON.parse(raw);
+      if (!Array.isArray(existing) || existing.length === 0)
+        return null;
+      return existing[existing.length - 1] || null;
+    } catch (e) {
+      return null;
     }
   });
 }
-function LlamaIndexStream(res, opts) {
-  const data = new experimental_StreamData();
-  return {
-    stream: createParser(res, data, opts == null ? void 0 : opts.parserOptions).pipeThrough(createCallbacksTransformer(opts == null ? void 0 : opts.callbacks)).pipeThrough(createStreamDataTransformer(true)),
-    data
-  };
+function sanitize(str) {
+  return str.replace(/[^a-zA-Z0-9-_]/g, "_");
 }
 
 // src/controllers/chat.controller.ts
-var convertMessageContent = (textMessage, imageUrl) => {
-  if (!imageUrl)
-    return textMessage;
-  return [
-    { type: "text", text: textMessage },
-    {
-      type: "image_url",
-      image_url: { url: imageUrl }
-    }
-  ];
-};
 var chat = (req, res) => __async(void 0, null, function* () {
   try {
-    const { messages, data } = req.body;
-    const userMessage = messages.pop();
-    if (!messages || !userMessage || userMessage.role !== "user") {
+    const {
+      messages,
+      data,
+      userId
+    } = req.body;
+    if (!userId) {
+      return res.status(400).json({ error: "Missing userId \u2014 login required!" });
+    }
+    if (!messages || messages.length === 0) {
       return res.status(400).json({
-        error: "messages are required in the request body and the last message must be from the user"
+        error: "messages are required in the request body"
       });
     }
-    const llm = new OpenAI({
-      // Override via HF_MODEL to pick any HF chat model
-      model: "openai/gpt-oss-20b:groq",
-      // Prefer HF_TOKEN, fallback to HUGGINGFACEHUB_API_TOKEN for flexibility
-      apiKey: process.env.HF_TOKEN || process.env.HUGGINGFACEHUB_API_TOKEN,
-      // Hugging Face OpenAI-compatible base URL
-      baseURL: "https://api-inference.huggingface.co/v1"
+    const last = messages[messages.length - 1];
+    if (last.role !== "user") {
+      return res.status(400).json({
+        error: "the last message must be from the user"
+      });
+    }
+    if (!process.env.MISTRAL_API_KEY) {
+      return res.status(500).json({
+        error: "MISTRAL_API_KEY is not set"
+      });
+    }
+    const question = last.content;
+    const rag = yield getRagContext(question);
+    const { context } = rag;
+    const systemPrompt = `You are an assistant that must answer in the same language as the user's question (default to English if unclear). Use ONLY the provided CONTEXT. If the answer is not in the context, reply: "I cannot find this information in the uploaded documents." Be concise (2-3 sentences). Do not fabricate or add external information.`;
+    const contextMessage = context ? `CONTEXT START
+${context}
+CONTEXT END` : "Nu exista context relevant din documente pentru intrebarea de mai sus.";
+    const mistralMessages = [
+      { role: "system", content: systemPrompt },
+      { role: "system", content: contextMessage },
+      ...messages.slice(0, -1),
+      last
+    ];
+    const mistral = new OpenAI({
+      apiKey: process.env.MISTRAL_API_KEY,
+      baseURL: process.env.MISTRAL_BASE_URL || "https://api.mistral.ai/v1"
     });
-    const chatEngine = yield createChatEngine(llm);
-    10;
-    const userMessageContent = convertMessageContent(
-      userMessage.content,
-      data == null ? void 0 : data.imageUrl
-    );
-    console.log("newMessage", userMessageContent);
-    console.log("chathistory", messages);
-    const response = yield chatEngine.chat({
-      message: userMessageContent,
-      chatHistory: messages,
+    const model = process.env.MISTRAL_MODEL || "mistral-small-latest";
+    console.log("[Mistral chat] model:", model);
+    const completion = yield mistral.chat.completions.create({
+      model,
+      messages: mistralMessages,
       stream: true
     });
-    const { stream, data: streamData } = LlamaIndexStream(response, {
-      parserOptions: { image_url: data == null ? void 0 : data.imageUrl }
+    let finalAnswer = "";
+    const stream = OpenAIStream(completion, {
+      experimental_streamData: true,
+      onToken: (t) => finalAnswer += t,
+      onFinal: () => __async(void 0, null, function* () {
+        var _a;
+        yield appendHistory(userId, [
+          ...messages.map((m) => ({
+            role: m.role,
+            content: m.content,
+            timestamp: (/* @__PURE__ */ new Date()).toISOString()
+          })),
+          {
+            role: "assistant",
+            content: finalAnswer,
+            timestamp: (/* @__PURE__ */ new Date()).toISOString()
+          }
+        ]);
+        return {
+          imageUrl: (_a = data == null ? void 0 : data.imageUrl) != null ? _a : null,
+          usedRag: !!context
+        };
+      })
     });
-    const processedStream = stream.pipeThrough(streamData.stream);
-    return streamToResponse(processedStream, res, {
+    return streamToResponse(stream, res, {
       headers: {
         "X-Experimental-Stream-Data": "true",
         "Content-Type": "text/plain; charset=utf-8",
@@ -186,45 +278,38 @@ var chat = (req, res) => __async(void 0, null, function* () {
       }
     });
   } catch (error) {
-    console.error("[LlamaIndex]", error);
+    console.error("[Mistral chat controller]", error);
     return res.status(500).json({
       error: error.message
     });
   }
 });
 
-// src/routes/chat.route.ts
-var llmRouter = express.Router();
-llmRouter.route("/").post(chat);
-var chat_route_default = llmRouter;
-
 // index.ts
-var app = express2();
-var port = parseInt(process.env.PORT2 || "8000");
-var env = process.env["NODE_ENV"];
-var isDevelopment = !env || env === "development";
-var prodCorsOrigin = process.env["PROD_CORS_ORIGIN"];
-app.use(express2.json());
-if (isDevelopment) {
-  console.warn("Running in development mode - allowing CORS for all origins");
-  app.use(cors());
-} else if (prodCorsOrigin) {
-  console.log(
-    `Running in production mode - allowing CORS for domain: ${prodCorsOrigin}`
-  );
-  const corsOptions = {
-    origin: prodCorsOrigin
-    // Restrict to production domain
-  };
-  app.use(cors(corsOptions));
-} else {
-  console.warn("Production CORS origin not set, defaulting to no CORS.");
-}
-app.use(express2.text());
-app.get("/", (req, res) => {
-  res.send("LlamaIndex Express Server");
-});
-app.use("/api/chat", chat_route_default);
-app.listen(port, () => {
-  console.log(`\u26A1\uFE0F[server]: Server is running at http://localhost:${port}`);
+var app = express();
+app.use(cors());
+app.use(express.json());
+app.post("/api/chat", chat);
+app.get("/api/history", (req, res) => __async(void 0, null, function* () {
+  const userId = req.query.userId;
+  if (!userId) {
+    return res.status(400).json({ error: "Missing userId" });
+  }
+  try {
+    const history = yield getLatestHistory(userId);
+    const withIds = (history == null ? void 0 : history.map((m, idx) => ({
+      id: `${m.timestamp || idx}-${idx}`,
+      role: m.role,
+      content: m.content,
+      timestamp: m.timestamp
+    }))) || [];
+    return res.json({ history: withIds });
+  } catch (err) {
+    console.error("[History] Failed to read history", err);
+    return res.status(500).json({ error: "Failed to read history" });
+  }
+}));
+var PORT = process.env.PORT || 8e3;
+app.listen(PORT, () => {
+  console.log(`Backend server running on http://localhost:${PORT}`);
 });

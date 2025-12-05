@@ -6,14 +6,17 @@ import {
   trimStartOfStreamHelper,
   type AIStreamCallbacksAndOptions,
 } from "ai";
-import { Response } from "llamaindex";
+
+type GenericResponse = {
+  response?: string;
+};
 
 type ParserOptions = {
   image_url?: string;
 };
 
 function createParser(
-  res: AsyncIterable<Response>,
+  res: AsyncIterable<GenericResponse>,
   data: experimental_StreamData,
   opts?: ParserOptions,
 ) {
@@ -21,7 +24,6 @@ function createParser(
   const trimStartOfStream = trimStartOfStreamHelper();
   return new ReadableStream<string>({
     start() {
-      // if image_url is provided, send it via the data stream
       if (opts?.image_url) {
         const message: JSONValue = {
           type: "image_url",
@@ -31,14 +33,14 @@ function createParser(
         };
         data.append(message);
       } else {
-        data.append({}); // send an empty image response for the user's message
+        data.append({});
       }
     },
     async pull(controller): Promise<void> {
       const { value, done } = await it.next();
       if (done) {
         controller.close();
-        data.append({}); // send an empty image response for the assistant's message
+        data.append({});
         data.close();
         return;
       }
@@ -52,7 +54,7 @@ function createParser(
 }
 
 export function LlamaIndexStream(
-  res: AsyncIterable<Response>,
+  res: AsyncIterable<GenericResponse>,
   opts?: {
     callbacks?: AIStreamCallbacksAndOptions;
     parserOptions?: ParserOptions;

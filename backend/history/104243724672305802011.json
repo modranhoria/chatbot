@@ -1,0 +1,1230 @@
+[
+  [
+    {
+      "role": "user",
+      "content": "Cate pagini are cartea de LabVIEW?",
+      "timestamp": "2025-12-05T12:42:32.471Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:42:32.471Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Ce tipuri de grafice exista in LabvIEW?",
+      "timestamp": "2025-12-05T12:50:22.756Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:50:22.756Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Ce tipuri de grafice exista in LabvIEW?",
+      "timestamp": "2025-12-05T12:50:39.285Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:50:39.285Z"
+    },
+    {
+      "role": "user",
+      "content": "Care e diferenta intre Waveform Graph si Waveform chart?",
+      "timestamp": "2025-12-05T12:50:39.285Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:50:39.285Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Ce tipuri de grafice exista in LabvIEW?",
+      "timestamp": "2025-12-05T12:52:06.414Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:52:06.414Z"
+    },
+    {
+      "role": "user",
+      "content": "Care e diferenta intre Waveform Graph si Waveform chart?",
+      "timestamp": "2025-12-05T12:52:06.414Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:52:06.414Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce ofera meniul controls?",
+      "timestamp": "2025-12-05T12:52:06.414Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:52:06.414Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Ce tipuri de grafice exista in LabvIEW?",
+      "timestamp": "2025-12-05T12:52:23.335Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:52:23.335Z"
+    },
+    {
+      "role": "user",
+      "content": "Care e diferenta intre Waveform Graph si Waveform chart?",
+      "timestamp": "2025-12-05T12:52:23.335Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:52:23.335Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce ofera meniul controls?",
+      "timestamp": "2025-12-05T12:52:23.335Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:52:23.335Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce este un strip chart?",
+      "timestamp": "2025-12-05T12:52:23.335Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:52:23.335Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Ce tipuri de grafice exista in LabvIEW?",
+      "timestamp": "2025-12-05T12:52:37.080Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:52:37.080Z"
+    },
+    {
+      "role": "user",
+      "content": "Care e diferenta intre Waveform Graph si Waveform chart?",
+      "timestamp": "2025-12-05T12:52:37.080Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:52:37.080Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce ofera meniul controls?",
+      "timestamp": "2025-12-05T12:52:37.080Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:52:37.080Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce este un strip chart?",
+      "timestamp": "2025-12-05T12:52:37.080Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:52:37.080Z"
+    },
+    {
+      "role": "user",
+      "content": "ce este waveform chart?",
+      "timestamp": "2025-12-05T12:52:37.080Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:52:37.080Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Ce tipuri de grafice exista in LabvIEW?",
+      "timestamp": "2025-12-05T12:52:52.141Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:52:52.141Z"
+    },
+    {
+      "role": "user",
+      "content": "Care e diferenta intre Waveform Graph si Waveform chart?",
+      "timestamp": "2025-12-05T12:52:52.141Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:52:52.141Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce ofera meniul controls?",
+      "timestamp": "2025-12-05T12:52:52.141Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:52:52.141Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce este un strip chart?",
+      "timestamp": "2025-12-05T12:52:52.141Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:52:52.141Z"
+    },
+    {
+      "role": "user",
+      "content": "ce este waveform chart?",
+      "timestamp": "2025-12-05T12:52:52.141Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:52:52.141Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce informatii gasesti in documentele incarcate?",
+      "timestamp": "2025-12-05T12:52:52.141Z"
+    },
+    {
+      "role": "assistant",
+      "content": "În documentele încărcate găsesc următoarele informații:\n\n1. **Conectori MXP A și B**:\n   - Au patru canale de intrare analogică cu un singur capăt pentru fiecare conector, AI0 - AI3.\n   - Se pot utiliza pentru a măsura semnale de 0 - 5 V.\n\n2. **Instrumente virtuale pentru sisteme liniare în LabVIEW**:\n   - LabVIEW oferă un set complet de VI-uri pentru calculul matriceal.\n   - Aceste VI-uri se găsesc în meniul `Functions >> Mathematics >> Linear Algebra` (Advanced Linear Algebra, Complex Linear Algebra >> Advanced Complex Linear Algebra).\n\n3. **Moduri de actualizare a graficelor**:\n   - **Strip chart**: Prezintă un ecran grafic similar registratoarelor cu bandă continuă.\n   - **Scope chart** și **Sweep chart**: Sunt similare cu baleiajul continuu de tip osciloscop.\n   - Opțiunile de actualizare se găsesc în meniul `Advanced >> Update Mode`.\n\n4. **Informații despre universitate și autori**:\n   - Universitatea \"Transilvania\" din Brașov, Departamentul de Electronică și Calculatoare.\n   - Autori: Horia Alexandru Modran, Ioana Corina Bogdan, Doru Ursuțiu, Cornel Samoilă.\n   - Titlul lucrării: \"Introducere în Programarea Grafică LabVIEW cu Aplicații în Electronică, Telecomunicații și Tehnologii Informaționale\".\n\n5. **Context suplimentar**:\n   - Referințe la LabVIEW și aplicațiile sale în diverse domenii.\n   - Mentionarea \"Laboratorul de Creativitate Academia LabVIEW CVTC 2024\".\n\nDacă ai nevoie de informații mai specifice, te rog să precizezi.",
+      "timestamp": "2025-12-05T12:52:52.141Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Ce tipuri de grafice exista in LabvIEW?",
+      "timestamp": "2025-12-05T12:57:09.682Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:57:09.682Z"
+    },
+    {
+      "role": "user",
+      "content": "Care e diferenta intre Waveform Graph si Waveform chart?",
+      "timestamp": "2025-12-05T12:57:09.682Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:57:09.682Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce ofera meniul controls?",
+      "timestamp": "2025-12-05T12:57:09.682Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:57:09.682Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce este un strip chart?",
+      "timestamp": "2025-12-05T12:57:09.682Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:57:09.682Z"
+    },
+    {
+      "role": "user",
+      "content": "ce este waveform chart?",
+      "timestamp": "2025-12-05T12:57:09.682Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:57:09.682Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce informatii gasesti in documentele incarcate?",
+      "timestamp": "2025-12-05T12:57:09.682Z"
+    },
+    {
+      "role": "assistant",
+      "content": "În documentele încărcate găsesc următoarele informații:\n\n1. **Conectori MXP A și B**:\n   - Au patru canale de intrare analogică cu un singur capăt pentru fiecare conector, AI0 - AI3.\n   - Se pot utiliza pentru a măsura semnale de 0 - 5 V.\n\n2. **Instrumente virtuale pentru sisteme liniare în LabVIEW**:\n   - LabVIEW oferă un set complet de VI-uri pentru calculul matriceal.\n   - Aceste VI-uri se găsesc în meniul `Functions >> Mathematics >> Linear Algebra` (Advanced Linear Algebra, Complex Linear Algebra >> Advanced Complex Linear Algebra).\n\n3. **Moduri de actualizare a graficelor**:\n   - **Strip chart**: Prezintă un ecran grafic similar registratoarelor cu bandă continuă.\n   - **Scope chart** și **Sweep chart**: Sunt similare cu baleiajul continuu de tip osciloscop.\n   - Opțiunile de actualizare se găsesc în meniul `Advanced >> Update Mode`.\n\n4. **Informații despre universitate și autori**:\n   - Universitatea \"Transilvania\" din Brașov, Departamentul de Electronică și Calculatoare.\n   - Autori: Horia Alexandru Modran, Ioana Corina Bogdan, Doru Ursuțiu, Cornel Samoilă.\n   - Titlul lucrării: \"Introducere în Programarea Grafică LabVIEW cu Aplicații în Electronică, Telecomunicații și Tehnologii Informaționale\".\n\n5. **Context suplimentar**:\n   - Referințe la LabVIEW și aplicațiile sale în diverse domenii.\n   - Mentionarea \"Laboratorul de Creativitate Academia LabVIEW CVTC 2024\".\n\nDacă ai nevoie de informații mai specifice, te rog să precizezi.",
+      "timestamp": "2025-12-05T12:57:09.682Z"
+    },
+    {
+      "role": "user",
+      "content": "Cine sunt autorii lucrarii?",
+      "timestamp": "2025-12-05T12:57:09.682Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Autorii lucrării sunt:\n\n- Horia Alexandru Modran\n- Ioana Corina Bogdan\n- Doru Ursuțiu\n- Cornel Samoilă",
+      "timestamp": "2025-12-05T12:57:09.682Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Ce tipuri de grafice exista in LabvIEW?",
+      "timestamp": "2025-12-05T12:57:18.964Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:57:18.964Z"
+    },
+    {
+      "role": "user",
+      "content": "Care e diferenta intre Waveform Graph si Waveform chart?",
+      "timestamp": "2025-12-05T12:57:18.964Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:57:18.964Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce ofera meniul controls?",
+      "timestamp": "2025-12-05T12:57:18.964Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:57:18.964Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce este un strip chart?",
+      "timestamp": "2025-12-05T12:57:18.964Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:57:18.964Z"
+    },
+    {
+      "role": "user",
+      "content": "ce este waveform chart?",
+      "timestamp": "2025-12-05T12:57:18.964Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:57:18.964Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce informatii gasesti in documentele incarcate?",
+      "timestamp": "2025-12-05T12:57:18.964Z"
+    },
+    {
+      "role": "assistant",
+      "content": "În documentele încărcate găsesc următoarele informații:\n\n1. **Conectori MXP A și B**:\n   - Au patru canale de intrare analogică cu un singur capăt pentru fiecare conector, AI0 - AI3.\n   - Se pot utiliza pentru a măsura semnale de 0 - 5 V.\n\n2. **Instrumente virtuale pentru sisteme liniare în LabVIEW**:\n   - LabVIEW oferă un set complet de VI-uri pentru calculul matriceal.\n   - Aceste VI-uri se găsesc în meniul `Functions >> Mathematics >> Linear Algebra` (Advanced Linear Algebra, Complex Linear Algebra >> Advanced Complex Linear Algebra).\n\n3. **Moduri de actualizare a graficelor**:\n   - **Strip chart**: Prezintă un ecran grafic similar registratoarelor cu bandă continuă.\n   - **Scope chart** și **Sweep chart**: Sunt similare cu baleiajul continuu de tip osciloscop.\n   - Opțiunile de actualizare se găsesc în meniul `Advanced >> Update Mode`.\n\n4. **Informații despre universitate și autori**:\n   - Universitatea \"Transilvania\" din Brașov, Departamentul de Electronică și Calculatoare.\n   - Autori: Horia Alexandru Modran, Ioana Corina Bogdan, Doru Ursuțiu, Cornel Samoilă.\n   - Titlul lucrării: \"Introducere în Programarea Grafică LabVIEW cu Aplicații în Electronică, Telecomunicații și Tehnologii Informaționale\".\n\n5. **Context suplimentar**:\n   - Referințe la LabVIEW și aplicațiile sale în diverse domenii.\n   - Mentionarea \"Laboratorul de Creativitate Academia LabVIEW CVTC 2024\".\n\nDacă ai nevoie de informații mai specifice, te rog să precizezi.",
+      "timestamp": "2025-12-05T12:57:18.964Z"
+    },
+    {
+      "role": "user",
+      "content": "Cine sunt autorii lucrarii?",
+      "timestamp": "2025-12-05T12:57:18.964Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Autorii lucrării sunt:\n\n- Horia Alexandru Modran\n- Ioana Corina Bogdan\n- Doru Ursuțiu\n- Cornel Samoilă",
+      "timestamp": "2025-12-05T12:57:18.964Z"
+    },
+    {
+      "role": "user",
+      "content": "In ce an a aparut?",
+      "timestamp": "2025-12-05T12:57:18.964Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:57:18.964Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Ce tipuri de grafice exista in LabvIEW?",
+      "timestamp": "2025-12-05T12:57:30.126Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:57:30.126Z"
+    },
+    {
+      "role": "user",
+      "content": "Care e diferenta intre Waveform Graph si Waveform chart?",
+      "timestamp": "2025-12-05T12:57:30.126Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:57:30.126Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce ofera meniul controls?",
+      "timestamp": "2025-12-05T12:57:30.126Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:57:30.126Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce este un strip chart?",
+      "timestamp": "2025-12-05T12:57:30.126Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:57:30.126Z"
+    },
+    {
+      "role": "user",
+      "content": "ce este waveform chart?",
+      "timestamp": "2025-12-05T12:57:30.126Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:57:30.126Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce informatii gasesti in documentele incarcate?",
+      "timestamp": "2025-12-05T12:57:30.126Z"
+    },
+    {
+      "role": "assistant",
+      "content": "În documentele încărcate găsesc următoarele informații:\n\n1. **Conectori MXP A și B**:\n   - Au patru canale de intrare analogică cu un singur capăt pentru fiecare conector, AI0 - AI3.\n   - Se pot utiliza pentru a măsura semnale de 0 - 5 V.\n\n2. **Instrumente virtuale pentru sisteme liniare în LabVIEW**:\n   - LabVIEW oferă un set complet de VI-uri pentru calculul matriceal.\n   - Aceste VI-uri se găsesc în meniul `Functions >> Mathematics >> Linear Algebra` (Advanced Linear Algebra, Complex Linear Algebra >> Advanced Complex Linear Algebra).\n\n3. **Moduri de actualizare a graficelor**:\n   - **Strip chart**: Prezintă un ecran grafic similar registratoarelor cu bandă continuă.\n   - **Scope chart** și **Sweep chart**: Sunt similare cu baleiajul continuu de tip osciloscop.\n   - Opțiunile de actualizare se găsesc în meniul `Advanced >> Update Mode`.\n\n4. **Informații despre universitate și autori**:\n   - Universitatea \"Transilvania\" din Brașov, Departamentul de Electronică și Calculatoare.\n   - Autori: Horia Alexandru Modran, Ioana Corina Bogdan, Doru Ursuțiu, Cornel Samoilă.\n   - Titlul lucrării: \"Introducere în Programarea Grafică LabVIEW cu Aplicații în Electronică, Telecomunicații și Tehnologii Informaționale\".\n\n5. **Context suplimentar**:\n   - Referințe la LabVIEW și aplicațiile sale în diverse domenii.\n   - Mentionarea \"Laboratorul de Creativitate Academia LabVIEW CVTC 2024\".\n\nDacă ai nevoie de informații mai specifice, te rog să precizezi.",
+      "timestamp": "2025-12-05T12:57:30.126Z"
+    },
+    {
+      "role": "user",
+      "content": "Cine sunt autorii lucrarii?",
+      "timestamp": "2025-12-05T12:57:30.126Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Autorii lucrării sunt:\n\n- Horia Alexandru Modran\n- Ioana Corina Bogdan\n- Doru Ursuțiu\n- Cornel Samoilă",
+      "timestamp": "2025-12-05T12:57:30.126Z"
+    },
+    {
+      "role": "user",
+      "content": "In ce an a aparut?",
+      "timestamp": "2025-12-05T12:57:30.126Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:57:30.126Z"
+    },
+    {
+      "role": "user",
+      "content": "In what year was released?",
+      "timestamp": "2025-12-05T12:57:30.126Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu găsesc această informație în documentele încărcate.",
+      "timestamp": "2025-12-05T12:57:30.126Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Cate pagini are cartea de LabVIEW?",
+      "timestamp": "2025-12-05T13:05:10.886Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:05:10.886Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Cate pagini are cartea de LabVIEW?",
+      "timestamp": "2025-12-05T13:05:21.296Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:05:21.296Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce tipuri de grafice exista in labview?",
+      "timestamp": "2025-12-05T13:05:21.296Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:05:21.296Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Cate pagini are cartea de LabVIEW?",
+      "timestamp": "2025-12-05T13:15:33.575Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:15:33.575Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Cate pagini are cartea de LabVIEW?",
+      "timestamp": "2025-12-05T13:15:38.712Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:15:38.712Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce faci?",
+      "timestamp": "2025-12-05T13:15:38.712Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Raspund la intrebari bazate pe contextul primit din documentele utilizatorului, in limba romana.",
+      "timestamp": "2025-12-05T13:15:38.712Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Cate pagini are cartea de LabVIEW?",
+      "timestamp": "2025-12-05T13:15:51.758Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:15:51.758Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce faci?",
+      "timestamp": "2025-12-05T13:15:51.758Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Raspund la intrebari bazate pe contextul primit din documentele utilizatorului, in limba romana.",
+      "timestamp": "2025-12-05T13:15:51.758Z"
+    },
+    {
+      "role": "user",
+      "content": "ce grafice sunt in LabVIEW?",
+      "timestamp": "2025-12-05T13:15:51.758Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:15:51.758Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Cate pagini are cartea de LabVIEW?",
+      "timestamp": "2025-12-05T13:26:39.251Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:26:39.251Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Cate pagini are cartea de LabVIEW?",
+      "timestamp": "2025-12-05T13:26:59.030Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:26:59.030Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce tipuri de grafice exista in LabVIEW?",
+      "timestamp": "2025-12-05T13:26:59.030Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:26:59.030Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Cate pagini are cartea de LabVIEW?",
+      "timestamp": "2025-12-05T13:29:59.361Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:29:59.361Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce tipuri de grafice exista in LabVIEW?",
+      "timestamp": "2025-12-05T13:29:59.361Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:29:59.361Z"
+    },
+    {
+      "role": "user",
+      "content": "Cine sunt autorii ?",
+      "timestamp": "2025-12-05T13:29:59.361Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:29:59.361Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Cate pagini are cartea de LabVIEW?",
+      "timestamp": "2025-12-05T13:30:06.730Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:30:06.730Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce tipuri de grafice exista in LabVIEW?",
+      "timestamp": "2025-12-05T13:30:06.730Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:30:06.730Z"
+    },
+    {
+      "role": "user",
+      "content": "Cine sunt autorii ?",
+      "timestamp": "2025-12-05T13:30:06.730Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:30:06.730Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce informatii gasesti?",
+      "timestamp": "2025-12-05T13:30:06.730Z"
+    },
+    {
+      "role": "assistant",
+      "content": "In documentele incarcate gasesti informatii despre LabVIEW, inclusiv despre grafice, comunicare IEEE 488 (GPIB), achizitie de date, dezvoltarea driverelor de instrument si alte functii si aplicatii ale LabVIEW.",
+      "timestamp": "2025-12-05T13:30:06.730Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Cate pagini are cartea de LabVIEW?",
+      "timestamp": "2025-12-05T13:30:20.072Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:30:20.072Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce tipuri de grafice exista in LabVIEW?",
+      "timestamp": "2025-12-05T13:30:20.072Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:30:20.072Z"
+    },
+    {
+      "role": "user",
+      "content": "Cine sunt autorii ?",
+      "timestamp": "2025-12-05T13:30:20.072Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:30:20.072Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce informatii gasesti?",
+      "timestamp": "2025-12-05T13:30:20.072Z"
+    },
+    {
+      "role": "assistant",
+      "content": "In documentele incarcate gasesti informatii despre LabVIEW, inclusiv despre grafice, comunicare IEEE 488 (GPIB), achizitie de date, dezvoltarea driverelor de instrument si alte functii si aplicatii ale LabVIEW.",
+      "timestamp": "2025-12-05T13:30:20.072Z"
+    },
+    {
+      "role": "user",
+      "content": "Da exemple de functii din LabVIEW!",
+      "timestamp": "2025-12-05T13:30:20.072Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Din contextul incarcat, se mentiona functia \"Bundle\" din paleta \"Cluster, Class & Variant\" si functiile de conversie (Conversion) din meniul Functions (→ Numeric → Conversion).",
+      "timestamp": "2025-12-05T13:30:20.072Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Cate pagini are cartea de LabVIEW?",
+      "timestamp": "2025-12-05T13:31:35.914Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:31:35.914Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce tipuri de grafice exista in LabVIEW?",
+      "timestamp": "2025-12-05T13:31:35.914Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:31:35.914Z"
+    },
+    {
+      "role": "user",
+      "content": "Cine sunt autorii ?",
+      "timestamp": "2025-12-05T13:31:35.914Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:31:35.914Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce informatii gasesti?",
+      "timestamp": "2025-12-05T13:31:35.914Z"
+    },
+    {
+      "role": "assistant",
+      "content": "In documentele incarcate gasesti informatii despre LabVIEW, inclusiv despre grafice, comunicare IEEE 488 (GPIB), achizitie de date, dezvoltarea driverelor de instrument si alte functii si aplicatii ale LabVIEW.",
+      "timestamp": "2025-12-05T13:31:35.914Z"
+    },
+    {
+      "role": "user",
+      "content": "Da exemple de functii din LabVIEW!",
+      "timestamp": "2025-12-05T13:31:35.914Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Din contextul incarcat, se mentiona functia \"Bundle\" din paleta \"Cluster, Class & Variant\" si functiile de conversie (Conversion) din meniul Functions (→ Numeric → Conversion).",
+      "timestamp": "2025-12-05T13:31:35.914Z"
+    },
+    {
+      "role": "user",
+      "content": "Others?",
+      "timestamp": "2025-12-05T13:31:35.914Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc alte exemple de functii in documentele incarcate.",
+      "timestamp": "2025-12-05T13:31:35.914Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Cate pagini are cartea de LabVIEW?",
+      "timestamp": "2025-12-05T13:35:54.299Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:35:54.299Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Cate pagini are cartea de LabVIEW?",
+      "timestamp": "2025-12-05T13:36:04.209Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:36:04.209Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce informatii gasesti ??",
+      "timestamp": "2025-12-05T13:36:04.209Z"
+    },
+    {
+      "role": "assistant",
+      "content": "In documentele incarcate gasesti informatii despre:\n- Tipuri de grafice in LabVIEW (pagina 34).\n- Conectarea senzorilor la MyRio-1900 (pagina 120).\n- Comunicatie IEEE 488 (GPIB) si mesaje GPIB (pagina 5).\n- Achizitie de date si configurarea sistemelor DAQ (pagina 87).\n- Modul S/M din diagrama bloc (pagina 59).\n- Rolul controlerului GPIB (pagina 78).",
+      "timestamp": "2025-12-05T13:36:04.209Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Cate pagini are cartea de LabVIEW?",
+      "timestamp": "2025-12-05T13:36:18.441Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:36:18.441Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce informatii gasesti ??",
+      "timestamp": "2025-12-05T13:36:18.441Z"
+    },
+    {
+      "role": "assistant",
+      "content": "In documentele incarcate gasesti informatii despre:\n- Tipuri de grafice in LabVIEW (pagina 34).\n- Conectarea senzorilor la MyRio-1900 (pagina 120).\n- Comunicatie IEEE 488 (GPIB) si mesaje GPIB (pagina 5).\n- Achizitie de date si configurarea sistemelor DAQ (pagina 87).\n- Modul S/M din diagrama bloc (pagina 59).\n- Rolul controlerului GPIB (pagina 78).",
+      "timestamp": "2025-12-05T13:36:18.441Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce tipuri de grafice exista in LabVIEW?",
+      "timestamp": "2025-12-05T13:36:18.441Z"
+    },
+    {
+      "role": "assistant",
+      "content": "In documentele incarcate nu gasesc informatii despre tipurile de grafice din LabVIEW.",
+      "timestamp": "2025-12-05T13:36:18.441Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Cate pagini are cartea de LabVIEW?",
+      "timestamp": "2025-12-05T13:36:34.510Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:36:34.510Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce informatii gasesti ??",
+      "timestamp": "2025-12-05T13:36:34.510Z"
+    },
+    {
+      "role": "assistant",
+      "content": "In documentele incarcate gasesti informatii despre:\n- Tipuri de grafice in LabVIEW (pagina 34).\n- Conectarea senzorilor la MyRio-1900 (pagina 120).\n- Comunicatie IEEE 488 (GPIB) si mesaje GPIB (pagina 5).\n- Achizitie de date si configurarea sistemelor DAQ (pagina 87).\n- Modul S/M din diagrama bloc (pagina 59).\n- Rolul controlerului GPIB (pagina 78).",
+      "timestamp": "2025-12-05T13:36:34.510Z"
+    },
+    {
+      "role": "user",
+      "content": "Ce tipuri de grafice exista in LabVIEW?",
+      "timestamp": "2025-12-05T13:36:34.510Z"
+    },
+    {
+      "role": "assistant",
+      "content": "In documentele incarcate nu gasesc informatii despre tipurile de grafice din LabVIEW.",
+      "timestamp": "2025-12-05T13:36:34.510Z"
+    },
+    {
+      "role": "user",
+      "content": "ce functii exista in LabVIEW?",
+      "timestamp": "2025-12-05T13:36:34.510Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Nu gasesc aceasta informatie in documentele incarcate.",
+      "timestamp": "2025-12-05T13:36:34.510Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Who is the author?",
+      "timestamp": "2025-12-05T13:44:39.329Z"
+    },
+    {
+      "role": "assistant",
+      "content": "The author is Hayden.",
+      "timestamp": "2025-12-05T13:44:39.329Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Who is the author?",
+      "timestamp": "2025-12-05T13:45:32.927Z"
+    },
+    {
+      "role": "assistant",
+      "content": "The author is Hayden.",
+      "timestamp": "2025-12-05T13:45:32.927Z"
+    },
+    {
+      "role": "user",
+      "content": "How many chapter it has?",
+      "timestamp": "2025-12-05T13:45:32.927Z"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot find this information in the uploaded documents.",
+      "timestamp": "2025-12-05T13:45:32.927Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Who is the author?",
+      "timestamp": "2025-12-05T13:45:51.450Z"
+    },
+    {
+      "role": "assistant",
+      "content": "The author is Hayden.",
+      "timestamp": "2025-12-05T13:45:51.450Z"
+    },
+    {
+      "role": "user",
+      "content": "How many chapter it has?",
+      "timestamp": "2025-12-05T13:45:51.450Z"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot find this information in the uploaded documents.",
+      "timestamp": "2025-12-05T13:45:51.450Z"
+    },
+    {
+      "role": "user",
+      "content": "What is reinforcement learning?",
+      "timestamp": "2025-12-05T13:45:51.450Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Reinforcement learning is a type of machine learning where an agent learns to make decisions by interacting with an environment. The agent receives rewards or penalties based on its actions, aiming to maximize cumulative reward through trial-and-error.",
+      "timestamp": "2025-12-05T13:45:51.450Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Who is the author?",
+      "timestamp": "2025-12-05T13:46:36.897Z"
+    },
+    {
+      "role": "assistant",
+      "content": "The author is Hayden.",
+      "timestamp": "2025-12-05T13:46:36.897Z"
+    },
+    {
+      "role": "user",
+      "content": "How many chapter it has?",
+      "timestamp": "2025-12-05T13:46:36.897Z"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot find this information in the uploaded documents.",
+      "timestamp": "2025-12-05T13:46:36.897Z"
+    },
+    {
+      "role": "user",
+      "content": "What is reinforcement learning?",
+      "timestamp": "2025-12-05T13:46:36.897Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Reinforcement learning is a type of machine learning where an agent learns to make decisions by interacting with an environment. The agent receives rewards or penalties based on its actions, aiming to maximize cumulative reward through trial-and-error.",
+      "timestamp": "2025-12-05T13:46:36.897Z"
+    },
+    {
+      "role": "user",
+      "content": "What is an auto-encoder?",
+      "timestamp": "2025-12-05T13:46:36.898Z"
+    },
+    {
+      "role": "assistant",
+      "content": "An autoencoder is a type of neural network used for unsupervised learning, consisting of two main parts: an encoder and a decoder. The encoder compresses the input data into a lower-dimensional latent representation, while the decoder reconstructs the original data from this compressed form.",
+      "timestamp": "2025-12-05T13:46:36.898Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Who is the author?",
+      "timestamp": "2025-12-05T13:48:23.290Z"
+    },
+    {
+      "role": "assistant",
+      "content": "The author is Hayden.",
+      "timestamp": "2025-12-05T13:48:23.290Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Who is the author?",
+      "timestamp": "2025-12-05T13:52:13.617Z"
+    },
+    {
+      "role": "assistant",
+      "content": "The author is Hayden.",
+      "timestamp": "2025-12-05T13:52:13.618Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Who is the author?",
+      "timestamp": "2025-12-05T13:52:22.026Z"
+    },
+    {
+      "role": "assistant",
+      "content": "The author is Hayden.",
+      "timestamp": "2025-12-05T13:52:22.026Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Who is the author?",
+      "timestamp": "2025-12-05T13:52:30.920Z"
+    },
+    {
+      "role": "assistant",
+      "content": "The author is Hayden.",
+      "timestamp": "2025-12-05T13:52:30.920Z"
+    },
+    {
+      "role": "user",
+      "content": "How many pages it has?",
+      "timestamp": "2025-12-05T13:52:30.920Z"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot find this information in the uploaded documents.",
+      "timestamp": "2025-12-05T13:52:30.920Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Who is the author?",
+      "timestamp": "2025-12-05T13:52:40.034Z"
+    },
+    {
+      "role": "assistant",
+      "content": "The author is Hayden.",
+      "timestamp": "2025-12-05T13:52:40.034Z"
+    },
+    {
+      "role": "user",
+      "content": "How many pages it has?",
+      "timestamp": "2025-12-05T13:52:40.034Z"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot find this information in the uploaded documents.",
+      "timestamp": "2025-12-05T13:52:40.034Z"
+    },
+    {
+      "role": "user",
+      "content": "What is autoencoder?",
+      "timestamp": "2025-12-05T13:52:40.034Z"
+    },
+    {
+      "role": "assistant",
+      "content": "An autoencoder is a type of neural network composed of two concatenated networks: an encoder and a decoder. The encoder compresses the input data into a lower-dimensional latent vector, while the decoder reconstructs the original data from this latent representation. Autoencoders are often used for dimensionality reduction and data compression.",
+      "timestamp": "2025-12-05T13:52:40.034Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Who is the author?",
+      "timestamp": "2025-12-05T13:53:16.309Z"
+    },
+    {
+      "role": "assistant",
+      "content": "The author is Hayden.",
+      "timestamp": "2025-12-05T13:53:16.309Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "fds",
+      "timestamp": "2025-12-05T13:55:07.962Z"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot find this information in the uploaded documents.",
+      "timestamp": "2025-12-05T13:55:07.962Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "fds",
+      "timestamp": "2025-12-05T13:55:12.988Z"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot find this information in the uploaded documents.",
+      "timestamp": "2025-12-05T13:55:12.988Z"
+    },
+    {
+      "role": "user",
+      "content": "Who is the author?",
+      "timestamp": "2025-12-05T13:55:12.988Z"
+    },
+    {
+      "role": "assistant",
+      "content": "The author is Hayden.",
+      "timestamp": "2025-12-05T13:55:12.988Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "fds",
+      "timestamp": "2025-12-05T13:55:20.031Z"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot find this information in the uploaded documents.",
+      "timestamp": "2025-12-05T13:55:20.031Z"
+    },
+    {
+      "role": "user",
+      "content": "Who is the author?",
+      "timestamp": "2025-12-05T13:55:20.031Z"
+    },
+    {
+      "role": "assistant",
+      "content": "The author is Hayden.",
+      "timestamp": "2025-12-05T13:55:20.031Z"
+    },
+    {
+      "role": "user",
+      "content": "Who is this?",
+      "timestamp": "2025-12-05T13:55:20.031Z"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot find this information in the uploaded documents.",
+      "timestamp": "2025-12-05T13:55:20.031Z"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "fds",
+      "timestamp": "2025-12-05T13:55:44.013Z"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot find this information in the uploaded documents.",
+      "timestamp": "2025-12-05T13:55:44.013Z"
+    },
+    {
+      "role": "user",
+      "content": "Who is the author?",
+      "timestamp": "2025-12-05T13:55:44.013Z"
+    },
+    {
+      "role": "assistant",
+      "content": "The author is Hayden.",
+      "timestamp": "2025-12-05T13:55:44.013Z"
+    },
+    {
+      "role": "user",
+      "content": "Who is this?",
+      "timestamp": "2025-12-05T13:55:44.013Z"
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot find this information in the uploaded documents.",
+      "timestamp": "2025-12-05T13:55:44.013Z"
+    },
+    {
+      "role": "user",
+      "content": "What is CNN?",
+      "timestamp": "2025-12-05T13:55:44.013Z"
+    },
+    {
+      "role": "assistant",
+      "content": "CNN stands for Convolutional Neural Network, a powerful model used in deep learning, particularly in the field of computer vision. It is a type of artificial neural network designed to process data with a grid-like topology, such as images.",
+      "timestamp": "2025-12-05T13:55:44.013Z"
+    }
+  ]
+]
